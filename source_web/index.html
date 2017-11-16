@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Andreas Bergh</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Facebook stuff -->
+  <meta property="og:title" content="Das Büro" />
+  <meta property="og:description" content="Das Büro is an experience at night with the latest thrilling club music in your ears.">
+  <meta property="og:image" content="http://www.das-buro.de/fb_das_buro_2015.jpg"/>
+  <meta property="og:url" content="http://www.das-buro.de"/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Google Web Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700|Suranna" rel="stylesheet" type="text/css">
+
+  <!-- build:css css/styles.min.css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- /build -->
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+  <![endif]-->
+</head>
+<body>
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <header>
+  </div>
+  <span class="copyright">
+    © Andreas Bergh, 2015
+  </span>
+</header><!-- .header -->
+<main>
+  <section class="title is-hidden">
+    <div class="content">
+      <svg id="me-myself-and-i" style="display: inherit; margin: 0 auto;" width="100%" height="480" viewBox="0 0 1245 168"></svg>
+      <svg id="mouse-teasing-scroll" class="mouse-teasing-scroll"></svg>
+    </div>
+  </section><!-- .title -->
+  <section class="playlist is-hidden">
+    <div class="playlist__container">
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a href="/" class="playlist__item" data-playlist-id="4">
+              <span class="mix__metadata mix__metadata--date"></span>
+              <span class="mix__metadata mix__metadata--title"></span>
+              <span class="mix__metadata mix__metadata--duration"></span>
+              <span class="mix__metadata mix__metadata--genre"></span>
+              <img class="playlist__icon_play" src="static/img/icon_play.svg" alt="Play">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="playlist__item" data-playlist-id="3">
+              <span class="mix__metadata mix__metadata--date"></span>
+              <span class="mix__metadata mix__metadata--title"></span>
+              <span class="mix__metadata mix__metadata--duration"></span>
+              <span class="mix__metadata mix__metadata--genre"></span>
+              <img class="playlist__icon_play" src="static/img/icon_play.svg" alt="Play">
+            </a>
+          </li>
+          <li>
+            <a href="/" class="playlist__item" data-playlist-id="2">
+              <span class="mix__metadata mix__metadata--date"></span>
+              <span class="mix__metadata mix__metadata--title"></span>
+              <span class="mix__metadata mix__metadata--duration"></span>
+              <span class="mix__metadata mix__metadata--genre"></span>
+              <img class="playlist__icon_play" src="static/img/icon_play.svg" alt="Play">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="playlist__powered_by">
+      <a href="http://soundcloud.com/markusbergh" target="_blank">
+        <span>Powered by</span>
+        <img src="static/img/sc_sbs_gradient_96x12.png" alt="Powered by SoundCloud">
+      </a>
+    </div>
+    <div class="playlist__artwork_cache is-hidden">
+      <img src="/static/img/rvn_002__artwork.jpg">
+      <img src="/static/img/rvn_003__artwork.jpg">
+      <img src="/static/img/rvn_004__artwork.jpg">
+    </div>
+  </section><!-- .playlist -->
+  <section class="player is-hidden">
+    <div class="player__container">
+      <div class="player__ui">
+        <div class="player__ui_metadata">
+          <time class="player__ui_time player__ui_time--current">0:00 / 0:00</time>
+          <p class="player__ui_title"></p>
+          <p class="player__ui_genre"></p>
+        </div>
+        <div class="player__ui_controls">
+          <div class="player__ui_controls_action">
+            <div class="player__ui__control_container">
+              <button class="player__ui_control player__ui_control--stop">
+                <span>Play</span>
+                <i class="player__icon player__icon--stop"></i>
+              </button>
+            </div>
+          </div>
+          <div class="player__ui_waveform">
+            <div class="player__ui_waveform_container">
+              <time class="player__ui_time player__ui_time--start">0:00</time>
+              <time class="player__ui_time player__ui_time--total"></time>
+              <div class="player__waveform"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- .player -->
+  <section class="loader is-hidden">
+    <div class="player__loader"></div>
+  </section><!-- .loader -->
+  <section class="visuals">
+    <div class="visuals__container">
+      <canvas class="audio_visuals audio_visuals__circles is-hidden"></canvas>
+      <canvas class="audio_visuals audio_visuals__circles--loudness is-hidden"></canvas>
+      <canvas class="audio_visuals audio_visuals__spectrum"></canvas>
+      <canvas class="audio_visuals audio_visuals__curve is-hidden"></canvas>
+      <canvas class="audio_visuals audio_visuals__wobble--left is-hidden"></canvas>
+      <canvas class="audio_visuals audio_visuals__wobble--right is-hidden"></canvas>
+    </div>
+  </section><!-- .visuals -->
+  <section class="artwork"></section><!-- .artwork -->
+</main><!-- .main -->
+
+<footer>
+  <span class="copyright copyright--footer">Made with ❤</span>
+</footer><!-- .footer -->
+
+<!-- SoundCloud API -->
+<script type="text/javascript" src="//connect.soundcloud.com/sdk.js"></script>
+
+<!-- build:js js/script-1.0.0.min.js -->
+<script type="text/javascript" data-config="js/config" src="js/config.js"></script>
+<script type="text/javascript" data-main="main" src="js/vendor/require-2.1.11.min.js"></script>
+<!-- /build -->
+
+</body>
+</html>

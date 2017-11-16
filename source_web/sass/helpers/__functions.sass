@@ -1,0 +1,15 @@
+/**
+ * Andreas Bergh
+ * Functions
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+
+$z-layers: ("visual_wobble": 55, "visual_circle": 66, "visual_circle_loudness": 66, "visual_spectrum": 55, "visual_waveform": 55, "player": 77, "playlist": 77)
+
+@function z($layer)
+    @if not map-has-key($z-layers, $layer)
+        @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted."
+
+    @return map-get($z-layers, $layer)

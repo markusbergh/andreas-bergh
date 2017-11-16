@@ -1,0 +1,234 @@
+/**
+ * Andreas Bergh
+ * Mixins
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+
+// Font face
+=declare-font-face($family, $src, $weight: normal, $style: normal)
+	@font-face
+		font-family: $family
+		src: url('#{$src}.eot')
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), url('#{$src}.woff') format('woff'), url('#{$src}.ttf') format('truetype'), url('#{$src}.svg##{$family}') format('svg')
+		font-style: $style
+		font-weight: $weight
+
+// Keyframes
+=keyframe($animation_name)
+	@-webkit-keyframes #{$animation_name}
+		@content
+
+	@-moz-keyframes #{$animation_name}
+		@content
+
+	@-o-keyframes #{$animation_name}
+		@content
+
+	@keyframes #{$animation_name}
+		@content
+
+// Animation
+=animation($delay, $duration, $animation, $fill-mode: "forwards")
+	-webkit-animation-delay: $delay
+	-webkit-animation-duration: $duration
+	-webkit-animation-name: $animation
+	-webkit-animation-fill-mode: #{$fill-mode}
+
+	-moz-animation-delay: $delay
+	-moz-animation-duration: $duration
+	-moz-animation-name: $animation
+	-moz-animation-fill-mode: #{$fill-mode}
+
+	-o-animation-delay: $delay
+	-o-animation-duration: $duration
+	-o-animation-name: $animation
+	-o-animation-fill-mode: #{$fill-mode}
+
+	animation-delay: $delay
+	animation-duration: $duration
+	animation-name: $animation
+	animation-fill-mode: #{$fill-mode}
+
+=animation-infinite
+	-webkit-animation-iteration-count: infinite
+	-moz-animation-iteration-count: infinite
+	-o-animation-iteration-count: infinite
+	animation-iteration-count: infinite
+
+
+// Box-sizing
+=box-sizing($type: "border")
+	/* Acceptable values are border, content, and padding - content is the default W3C model */
+	box-sizing: #{$type}-box
+	-webkit-box-sizing: #{$type}-box
+	-moz-box-sizing: #{$type}-box
+
+// Border-radius
+=border-radius($size)
+	border-radius: $size
+	-o-border-radius: $size
+	-ms-border-radius: $size
+	-moz-border-radius: $size
+	-webkit-border-radius: $size
+
+// No transition
+=no-transition()
+	-webkit-transition: none
+	-moz-transition: none
+	-o-transition: none
+	transition: none
+
+// Transition
+@function prefix($property, $prefixes: (webkit moz o ms))
+	$vendor-prefixed-properties: transform background-clip background-size
+	$result: ()
+	@each $prefix in $prefixes
+		@if index($vendor-prefixed-properties, $property)
+			$property: -#{$prefix}-#{$property}
+
+		$result: append($result, $property)
+
+	@return $result
+
+@function trans-prefix($transition, $prefix: moz)
+	$prefixed: ()
+	@each $trans in $transition
+		$prop-name: nth($trans, 1)
+		$vendor-prop-name: prefix($prop-name, $prefix)
+		$prop-vals: nth($trans, 2)
+		$prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma)
+
+	@return $prefixed
+
+
+=transition($values...)
+	$transitions: ()
+	@each $declaration in $values
+		$prop: nth($declaration, 1)
+		$prop-opts: ()
+		$length: length($declaration)
+		@for $i from 2 through $length
+			$prop-opts: append($prop-opts, nth($declaration, $i))
+
+		$trans: ($prop, $prop-opts)
+		$transitions: append($transitions, $trans, comma)
+
+	-webkit-transition: trans-prefix($transitions, webkit)
+	-moz-transition: trans-prefix($transitions, moz)
+	-o-transition: trans-prefix($transitions, o)
+	transition: $values
+
+// Clearfix
+=clearfix
+	*zoom: 1
+	&:before
+		content: " "
+		display: table
+	&:after
+		content: " "
+		display: table
+		clear: both
+
+// Rem
+@function calculateRem($size)
+	$remSize: $size / 16px
+	@return #{$remSize}rem
+
+=font-size($size)
+	font-size: $size //Fallback in px
+	font-size: calculateRem($size)
+
+// Select
+=x-user-select($value: none)
+	-webkit-user-select: $value
+	-moz-user-select: $value
+	-ms-user-select: $value
+	user-select: $value
+
+// Transform
+=transform($params)
+	-webkit-transform: $params
+	-moz-transform: $params
+	transform: $params
+
+// Transform origin
+=transform-origin($params)
+	-webkit-transform-origin: $params
+	-moz-transform-origin: $params
+	transform-origin: $params
+
+// Flexible with
+@function flexible($context, $target)
+	@return ($target / $context) * 100%
+
+// Placeholder
+=placeholder-style($style: false)
+	@if (not $style) or ($style == 'main')
+		color: $color__text-primary
+
+	@if $style == 'alt'
+		color: $color__text-link-secondary
+
+=apply-placeholders($style: false)
+	&::-webkit-input-placeholder
+		+placeholder-style($style)
+	&:-moz-placeholder
+		+placeholder-style($style)
+	&.placeholder
+		+placeholder-style($style)
+
+=filter($var)
+	-webkit-filter: $var
+	-moz-filter: $var
+	-ms-filter: $var
+	-o-filter: $var
+	filter: $var
+
+=linear-gradient($fromColor, $toColor)
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)) /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, $fromColor, $toColor) /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor) /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor) /* IE10 */
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor) /* Opera 11.10+ */
+	background-image:         linear-gradient(top, $fromColor, $toColor)
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+// Background transparency
+=background-transparent($color, $alpha)
+	$rgba: rgba($color, $alpha)
+	$ie-hex-str: ie-hex-str($rgba)
+	background-color: transparent
+	background-color: $rgba
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str})
+	zoom: 1
+
+// Border transparency
+// Opacity should be on a 100 point scale (0-100 instead of 0.0-1.0)
+// This should be used to supplement a normal border definition as it
+// only deals with the 'border-color' property.
+=border-opacity($color, $opacity)
+	$opacity: $opacity / 100
+
+	// Unsupporting browsers get this
+	border-color: $color
+
+	// Browsers that support RGBA will get this instead
+	border-color: rgba($color, $opacity)
+
+	// Prevent the element's background from reaching the edge of the border
+	-moz-background-clip: padding
+	-webkit-background-clip: padding
+	background-clip: padding-box
+
+=maintain-ratio($ratio: 1 1)
+	@if length($ratio) < 2 or length($ratio) > 2
+		@warn "$ratio must be a list with two values."
+
+	$width: 100%
+	$height: percentage(nth($ratio, 2) / nth($ratio, 1))
+
+	width: $width
+	height: 0
+	padding-bottom: $height

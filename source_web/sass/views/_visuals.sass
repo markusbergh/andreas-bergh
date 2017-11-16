@@ -1,0 +1,60 @@
+.visuals
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 33
+
+    &.is-hidden
+        visibility: hidden
+
+.visuals__container
+    position: relative
+    height: 100%
+    max-width: $size__max-width-content
+    margin: 0 auto
+    
+.audio_visuals
+    position: absolute
+
+    &.is-hidden
+        display: none
+
+.audio_visuals__spectrum
+    top: 130px
+    z-index: z("visual_spectrum")
+
+.audio_visuals__circles
+    z-index: z("visual_circle")
+
+.audio_visuals__circles--loudness
+    z-index: z("visual_circle_loudness")
+
+.audio_visuals__wobble--left,
+.audio_visuals__wobble--right
+    z-index: z("visual_wobble")
+
+.audio_visuals__waveform
+    z-index: z("visual_waveform")
+
+.audio_visuals__jiggle,
+.audio_visuals__jiggle--image,
+.audio_visuals__jiggle--container,
+.audio_visuals__jiggle--clone
+    width: 300px
+    height: 300px
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+.audio_visuals__jiggle--mask
+    overflow: hidden
+    will-change: transform
+    position: absolute
+    transform: none
+    top: 0
+    left: 0

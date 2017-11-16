@@ -1,0 +1,993 @@
+/*
+ * Andreas Bergh
+ * This file contains the identity for site.
+ *
+ * Author:
+ * Markus Bergh 2015
+ */
+/*
+ * Andreas Bergh
+ * Palette
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+/*
+ * Andreas Bergh
+ * Variables
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+/*
+ * Andreas Bergh
+ * Mixins
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+/*
+ * Andreas Bergh
+ * Extends
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+/*
+ * Andreas Bergh
+ * Functions
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+ * HTML5 display definitions
+ * ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none;
+}
+
+/* ==========================================================================
+ * Base
+ * ========================================================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+ * Links
+ * ========================================================================== */
+/*
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+/*
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* ==========================================================================
+ * Typography
+ * ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong {
+  font-weight: bold;
+}
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: yellow;
+  color: black;
+}
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+ * Embedded content
+ * ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+ * Figures
+ * ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+ * Forms
+ * ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button, input, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button, input {
+  line-height: normal;
+}
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button, select {
+  text-transform: none;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+ * Tables
+ * ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Andreas Bergh
+ * This is for general styles
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  height: 100%;
+  background: black;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro", sans-serif;
+  color: white;
+  opacity: 0;
+  overflow: hidden;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+  -webkit-transition: opacity 450ms ease;
+  -moz-transition: opacity 450ms ease;
+  -o-transition: opacity 450ms ease;
+  transition: opacity 450ms ease;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.loaded-and-ready body {
+  opacity: 1;
+  overflow: auto;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h {
+  width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 100;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+::selection {
+  background: white;
+}
+
+::-moz-selection {
+  background: white;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * Andreas Bergh
+ * Playlist
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+.playlist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 77;
+}
+.playlist.is-hidden {
+  visibility: hidden;
+}
+.playlist ul {
+  width: 100%;
+  height: 100%;
+}
+.playlist li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.playlist span {
+  display: block;
+  font-weight: 300;
+}
+.playlist span.mix__metadata--date, .playlist span.mix__metadata--genre, .playlist span.mix__metadata--duration {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.playlist span.mix__metadata--duration {
+  border-top: 1px solid white;
+  padding-top: 10px;
+}
+.playlist span.mix__metadata--title {
+  font-size: 52px;
+  font-size: 3.25rem;
+  margin: -25px 0 -20px 0;
+  font-family: "Suranna", serif;
+  text-transform: uppercase;
+}
+
+.playlist__container {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.playlist__item {
+  display: inline-block;
+  position: absolute;
+  color: white;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: -webkit-transform 1000ms ease-out;
+  -moz-transition: -moz-transform 1000ms ease-out;
+  -o-transition: -o-transform 1000ms ease-out;
+  transition: transform 1000ms ease-out;
+}
+.playlist__item:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.playlist__item img {
+  margin: 20px auto 0 auto;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.playlist__powered_by {
+  position: absolute;
+  z-index: 55;
+  top: 30px;
+  right: 30px;
+}
+.playlist__powered_by span {
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+.playlist__powered_by img {
+  display: inline;
+  vertical-align: middle;
+}
+
+/*
+ * Andreas Bergh
+ * Player UI
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+.player__ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.player__ui.is-hidden {
+  display: none;
+}
+
+.player__ui_metadata {
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+@media screen and (max-width: 1600px) {
+  .player__ui_metadata {
+    padding: 0 2%;
+    box-sizing: border-box;
+  }
+}
+
+.player__ui_control {
+  background: none;
+  border: 0;
+}
+.player__ui_control span {
+  text-indent: -9999px;
+}
+
+.player__ui_control {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  text-indent: -9999px;
+  border: 5px solid white;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.player__ui_control--stop i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #dc1171;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.player__ui_time {
+  position: absolute;
+  top: -20px;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.player__ui_time--total {
+  right: 0;
+}
+
+.player__ui_time--current {
+  margin: 0;
+  width: 100%;
+}
+
+.player__ui_title {
+  font-family: "Suranna", serif;
+  margin: 0 0 5px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-size: 54px;
+  font-size: 3.375rem;
+}
+
+.player__ui_genre {
+  margin: -5px 0 0;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.player__ui_time {
+  display: block;
+  letter-spacing: -0.05em;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.player__ui_controls {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 80px;
+  left: 0;
+}
+@media screen and (max-width: 1600px) {
+  .player__ui_controls {
+    padding: 0 2%;
+    box-sizing: border-box;
+  }
+}
+
+.player__ui_controls_action {
+  float: left;
+  width: 60px;
+  margin-right: 30px;
+}
+
+.player__ui_waveform {
+  float: right;
+  height: 60px;
+}
+
+.player__ui_waveform_container {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.player__waveform {
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}
+.loader.is-hidden {
+  display: none;
+}
+
+.player__loader {
+  -webkit-animation: animateCircle1 1.5s linear infinite;
+  clip: rect(0, 80px, 80px, 40px);
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  color: white;
+}
+.player__loader:after {
+  -webkit-animation: animateCircle2 1.5s ease-in-out infinite;
+  position: absolute;
+  clip: rect(0, 80px, 80px, 40px);
+  content: "";
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+@-webkit-keyframes animateCircle1 {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(220deg);
+    -webkit-transform: rotate(220deg);
+  }
+}
+@-webkit-keyframes animateCircle2 {
+  0% {
+    box-shadow: inset 0 0 0 17px;
+    transform: rotate(-140deg);
+    -webkit-transform: rotate(-140deg);
+  }
+
+  50% {
+    box-shadow: inset 0 0 0 2px;
+  }
+
+  100% {
+    box-shadow: inset 0 0 0 17px;
+    transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+  }
+}
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 77;
+}
+.player.is-hidden {
+  visibility: hidden;
+}
+
+.player__container {
+  position: relative;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.copyright {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: white;
+  z-index: 11;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.copyright--footer {
+  bottom: 30px;
+  right: 30px;
+  left: auto;
+  top: auto;
+}
+
+.visuals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 33;
+}
+.visuals.is-hidden {
+  visibility: hidden;
+}
+
+.visuals__container {
+  position: relative;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.audio_visuals {
+  position: absolute;
+}
+.audio_visuals.is-hidden {
+  display: none;
+}
+
+.audio_visuals__spectrum {
+  top: 130px;
+  z-index: 55;
+}
+
+.audio_visuals__circles {
+  z-index: 66;
+}
+
+.audio_visuals__circles--loudness {
+  z-index: 66;
+}
+
+.audio_visuals__wobble--left,
+.audio_visuals__wobble--right {
+  z-index: 55;
+}
+
+.audio_visuals__waveform {
+  z-index: 55;
+}
+
+.audio_visuals__jiggle,
+.audio_visuals__jiggle--image,
+.audio_visuals__jiggle--container,
+.audio_visuals__jiggle--clone {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.audio_visuals__jiggle--mask {
+  overflow: hidden;
+  will-change: transform;
+  position: absolute;
+  transform: none;
+  top: 0;
+  left: 0;
+}
+
+.playlist__artwork_cache.is-hidden {
+  display: none;
+}
+
+.artwork {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  -webkit-transition: background-image 400ms ease-in;
+  -moz-transition: background-image 400ms ease-in;
+  -o-transition: background-image 400ms ease-in;
+  transition: background-image 400ms ease-in;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.artwork:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.unsupport {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.unsupport__container {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 60px 0 0;
+}
+.unsupport__container p {
+  position: relative;
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.unsupport__container p:before {
+  background: url(/static/img/icon_warning.svg) no-repeat top left;
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  margin-left: -30px;
+  width: 60px;
+  height: 60px;
+}
+@media screen and (max-width: 48em) {
+  .unsupport__container p {
+    padding: 0 5%;
+  }
+}
+
+.title {
+  position: absolute;
+  z-index: 11;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.title.is-hidden {
+  visibility: hidden;
+}
+.title .content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media screen and (max-width: 1600px) {
+  #me-myself-and-i {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+
+.mouse-teasing-scroll {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  z-index: 999;
+  margin-left: -20px;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+.mouse-teasing-scroll.is-hidden {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

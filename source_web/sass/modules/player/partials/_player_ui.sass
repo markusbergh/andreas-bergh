@@ -1,0 +1,107 @@
+.player__ui
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    &.is-hidden
+        display: none
+
+.player__ui_metadata
+    position: absolute
+    top: 55px
+    left: 0
+
+    @media screen and (max-width: $size__max-width-content)
+        padding: 0 2%
+        box-sizing: border-box
+
+.player__ui_control
+    background: none
+    border: 0
+
+    span
+        text-indent: -9999px
+
+.player__ui_control
+    position: relative
+    width: 60px
+    height: 60px
+    padding: 0
+    margin: 0
+    text-indent: -9999px
+    border: 5px solid $color__white
+
+    +border-radius(50%)
+
+    &--stop
+        i
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 20px
+            height: 20px
+            background: $color__pink--razzmatazz
+
+            +transform( translateX(-50%) translateY(-50%) )
+
+.player__ui_time,
+    position: absolute
+    top: -20px
+    +font-size(12px)
+
+.player__ui_time--total
+    right: 0
+
+.player__ui_time--current
+    margin: 0
+    width: 100%
+
+.player__ui_title
+    font-family: "Suranna", serif
+    margin: 0 0 5px
+    line-height: 1
+    letter-spacing: 0.08em
+
+    +font-size(54px)
+
+.player__ui_genre
+    margin: -5px 0 0
+    +font-size(12px)
+
+.player__ui_time
+    display: block
+    letter-spacing: -0.05em
+    +font-size(12px)
+
+.player__ui_controls
+    position: absolute
+    width: 100%
+    height: 60px
+    bottom: 80px
+    left: 0
+
+    @media screen and (max-width: $size__max-width-content)
+        padding: 0 2%
+        box-sizing: border-box
+
+.player__ui_controls_action
+    float: left
+    width: 60px
+    margin-right: 30px
+
+.player__ui_waveform
+    float: right
+    height: 60px
+
+.player__ui_waveform_container
+    position: relative
+    width: 100%
+    top: 50%
+    +transform(translateY(-50%))
+
+.player__waveform
+    width: 100%
+    height: 100%

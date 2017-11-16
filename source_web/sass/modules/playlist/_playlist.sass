@@ -1,0 +1,89 @@
+/**
+ * Andreas Bergh
+ * Playlist
+ *
+ * Author:
+ * Markus Bergh, 2015
+ */
+
+.playlist
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: z("playlist")
+
+    &.is-hidden
+        visibility: hidden
+
+    ul
+        width: 100%
+        height: 100%
+
+    li
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+    span
+        display: block
+        font-weight: 300
+
+        &.mix__metadata--date,
+        &.mix__metadata--genre,
+        &.mix__metadata--duration
+            +font-size(14px)
+
+        &.mix__metadata--duration
+            border-top: 1px solid white
+            padding-top: 10px
+
+        &.mix__metadata--title
+            +font-size(52px)
+            margin: -25px 0 -20px 0
+            font-family: "Suranna", serif
+            text-transform: uppercase
+
+.playlist__container
+    position: relative
+    max-width: $size__max-width-content
+    margin: 0 auto
+    height: 100%
+
+.playlist__item
+    display: inline-block
+    position: absolute
+    color: white
+
+    -webkit-backface-visibility: hidden
+    -webkit-font-smoothing: antialiased
+
+    +transition(transform 1000ms ease-out)
+
+    &:hover
+        +transform(scale(1.05))
+
+    img
+        margin: 20px auto 0 auto
+        width: 60px
+        height: 60px
+        display: block
+
+.playlist__powered_by
+    position: absolute
+    z-index: 55
+    top: 30px
+    right: 30px
+
+    span
+        font-weight: 400
+        text-transform: uppercase
+        display: inline
+        +font-size(12px)
+
+    img
+        display: inline
+        vertical-align: middle

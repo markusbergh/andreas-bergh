@@ -1,0 +1,86 @@
+[
+  {
+    "id": 4,
+    "title": "RVN 004",
+    "url": "https://soundcloud.com/thump/adana-twins-bleeding-feat-human-life",
+    "genre": "House",
+    "artwork": "rvn_004__artwork",
+    "duration": "37min:29sec",
+    "date": "19th January",
+    "theme": {
+      "visuals": {
+        "primaryColor": "rgb(216, 53, 70)",
+        "secondaryColor": "rgb(142, 70, 216)",
+        "tertiaryColor": "rgb(216, 63, 205)",
+        "quarternaryColor": "rgb(180, 178, 217)",
+        "quinaryColor": "rgb(212, 29, 51)",
+        "senaryColor": "rgb(218, 184, 217)"
+      },
+      "default": {
+        "innerColor": "rgb(216, 53, 70)",
+        "outerColor": "rgba(0, 0, 0, 0)"
+      },
+      "stream": {
+        "defaultColor": "rgb(216, 53, 70)",
+        "playedColor": "rgb(216, 53, 70)",
+        "loadedColor": "rgb(142, 70, 216)"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": "RVN 003",
+    "url": "https://soundcloud.com/markusbergh/rvn-003",
+    "genre": "House",
+    "artwork": "rvn_003__artwork",
+    "duration": "47min:52sec",
+    "date": "29th December",
+    "theme": {
+      "visuals": {
+        "primaryColor": "rgb(64, 187, 212)",
+        "secondaryColor": "rgb(215, 72, 56)",
+        "tertiaryColor": "rgb(68, 108, 193)",
+        "quarternaryColor": "rgb(81, 208, 217)",
+        "quinaryColor": "rgb(163, 46, 39)",
+        "senaryColor": "rgb(217, 68, 46)"
+      },
+      "default": {
+        "innerColor": "rgb(64, 187, 212)",
+        "outerColor": "rgba(0, 0, 0, 0)"
+      },
+      "stream": {
+        "defaultColor": "rgb(64, 187, 212)",
+        "playedColor": "rgb(215, 72, 56)",
+        "loadedColor": "rgb(64, 187, 212)"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": "RVN 002",
+    "url": "https://soundcloud.com/markusbergh/rvn-02",
+    "genre": "Techno",
+    "artwork": "rvn_002__artwork",
+    "duration": "36min:32sec",
+    "date": "18th December",
+    "theme": {
+      "visuals": {
+        "primaryColor": "rgb(220, 17, 113)",
+        "secondaryColor": "rgb(64, 82, 199)",
+        "tertiaryColor": "rgb(82, 197, 218)",
+        "quarternaryColor": "rgb(169, 78, 205)",
+        "quinaryColor": "rgb(54, 85, 212)",
+        "senaryColor": "rgb(185, 35, 96)"
+      },
+      "default": {
+        "innerColor": "rgb(220, 17, 113)",
+        "outerColor": "rgba(0, 0, 0, 0)"
+      },
+      "stream": {
+        "defaultColor": "rgb(220, 17, 113)",
+        "playedColor": "rgb(220, 17, 113)",
+        "loadedColor": "rgb(64, 82, 199)"
+      }
+    }
+  }
+]

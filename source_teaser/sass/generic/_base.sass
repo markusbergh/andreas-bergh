@@ -1,0 +1,77 @@
+/*
+ * General blocks
+ */
+
+html
+  margin: 0
+  padding: 0
+  font-size: 100%
+  height: 100%
+  background: $color__background-primary
+
+body
+  font-family: $font__primary-font
+  margin: 0
+  padding: 0
+  color: $color__text-primary
+  opacity: 0
+  overflow: hidden
+
+  +transition(opacity 300ms ease)
+
+  .loaded-and-ready &
+    opacity: 1
+    overflow: auto
+
+  &.no-scroll
+    overflow: hidden
+
+  -webkit-text-size-adjust: 100%
+  -webkit-font-smoothing: antialiased
+  -webkit-appearance: none
+
+  +font-size(16px)
+
+h1, h2, h3, h4, h5, h6
+  width: 100%
+
+h1
+  +font-size(30px)
+  text-transform: uppercase
+  letter-spacing: 0.25em
+  font-weight: 100
+
+ol,
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+  color: $color__text-action-primary
+
+p
+  +font-size(16px)
+  line-height: 1.6
+
+::selection
+  background: white
+
+::-moz-selection
+  background: white
+
+main
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+footer
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  height: 100%
