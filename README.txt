@@ -1,5 +1,5 @@
 Andreas Bergh
-=====================
+=============
 
 JavaScript application for visualing audio streams with Soundcloud SDK.
 
